@@ -6,28 +6,25 @@
 
 - First Rule: Flex Container Wrapper
 
-    ```css
+  ```css
+  .wrapper {
     display: flex;
-    ```
+  }
+  ```
 
 - Main Axis and Cross Axis
 
   ![flexbox-axis](./assets/flexbox_axis.png)
 
   ```css
-  flex-direction: row;    /* column, ... */
+  .wrapper {
+    display: flex;
+    flex-direction: row;    /* column, ... */
+    justify-content: space-around;    /* flex-start, center, stretch, ... */
+    align-items: center;    /* flex-start, flex-end, ... */
+  }
   ```
 
   - flex-direction: decise Main Axis ("row" is default)
-
-  ```css
-  justify-content: space-around;    /* flex-start, center, stretch, ... */
-  ```
-
   - justify-content: change Main Axis's Item-Position
-
-  ```css
-  align-items: center;    /* flex-start, flex-end, ... */
-  ```
-
   - align-items: change Cross Axis's Item-Position
