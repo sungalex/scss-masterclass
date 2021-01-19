@@ -1,3 +1,7 @@
+.wrapper {
+  display: flex;
+}
+
 .box {
   background: blue;
   height: 100px;
