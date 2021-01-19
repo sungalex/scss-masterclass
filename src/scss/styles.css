@@ -1,7 +1,9 @@
 .wrapper {
   display: flex;
   flex-direction: row;    /* default */
+  /* Main Axis */
   justify-content: space-around;
+  /* Cross Axis */
   align-items: center;
   height: 50vh;
 }

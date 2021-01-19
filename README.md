@@ -14,8 +14,6 @@
 
 - Main Axis and Cross Axis
 
-  ![flexbox-axis](./assets/flexbox_axis.png)
-
   ```css
   .wrapper {
     display: flex;
@@ -25,6 +23,9 @@
   }
   ```
 
-  - flex-direction: decise Main Axis ("row" is default)
+  - flex-direction: decise Main Axis (default is "flex-direction: row;")
+
+    ![flexbox-axis](./assets/flexbox_axis.png)
+
   - justify-content: change Main Axis's Item-Position
   - align-items: change Cross Axis's Item-Position
