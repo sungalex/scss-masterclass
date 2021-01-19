@@ -1,11 +1,15 @@
 .wrapper {
   display: flex;
+  flex-direction: row;    /* default */
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
 }
 
 .box {
-  background: blue;
-  height: 100px;
-  width: 100px;
+  background: peru;
+  height: 200px;
+  width: 200px;
   display: inline-block;
   color: white;
 }
