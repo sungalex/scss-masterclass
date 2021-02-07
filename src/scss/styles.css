@@ -3,10 +3,11 @@
   flex-direction: row-reverse; /* default is "row" */
   /* Main Axis */
   justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap-reverse;
   /* Cross Axis */
   align-items: flex-start;
   height: 50vh;
-  flex-wrap: wrap-reverse;
 }
 
 .child {

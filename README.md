@@ -11,7 +11,7 @@
 - [x] order
 - [x] flex-wrap
 - [x] reverse
-- [ ] align-content
+- [x] align-content
 - [ ] flex-grow
 - [ ] flex-shrink
 - [ ] flex-basis
@@ -72,11 +72,13 @@
     }
     ```
 
-- reverse : flexbox have many reverse
+- reverse : reverse order of items (flexbox have many reverse)
 
   ```css
-  flex-derection: row-reverse; /* row, column, column-reverse, ... */
+  flex-direction: row-reverse; /* row, column, column-reverse, ... */
   flex-wrap: wrap-reverse; /* default is "nowrap" */
   ```
+
+- align-content : modify the line of main axis
 
 - Flexbox Froggy Game : https://flexboxfroggy.com/#ko
