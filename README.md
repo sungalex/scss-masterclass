@@ -75,10 +75,12 @@
 - reverse : reverse order of items (flexbox have many reverse)
 
   ```css
-  flex-direction: row-reverse; /* row, column, column-reverse, ... */
-  flex-wrap: wrap-reverse; /* default is "nowrap" */
+  .parent {
+    flex-direction: row-reverse; /* row, column, column-reverse, ... */
+    flex-wrap: wrap-reverse; /* default is "nowrap" */
+  }
   ```
 
-- align-content : modify the line of main axis
+- align-content : modify the line
 
 - Flexbox Froggy Game : https://flexboxfroggy.com/#ko
