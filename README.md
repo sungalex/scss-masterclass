@@ -4,10 +4,21 @@
 
 ## Flexbox
 
+- [x] flex-direction
+- [x] justify-content
+- [x] align-items
+- [x] align-self
+- [x] order
+- [ ] flex-wrap
+- [ ] align-content
+- [ ] flex-grow
+- [ ] flex-shrink
+- [ ] flex-basis
+
 - First Rule: Flex Container Wrapper
 
   ```css
-  .wrapper {
+  .parent {
     display: flex;
   }
   ```
@@ -15,17 +26,39 @@
 - Main Axis and Cross Axis
 
   ```css
-  .wrapper {
+  .parent {
     display: flex;
-    flex-direction: row;    /* column, ... */
-    justify-content: space-around;    /* flex-start, center, stretch, ... */
-    align-items: center;    /* flex-start, flex-end, ... */
+    flex-direction: row;
+    /* Main Axis */
+    justify-content: space-around;
+    /* Cross Axis */
+    align-items: center;
   }
   ```
 
-  - flex-direction: decise Main Axis (default is "flex-direction: row;")
+  - flex-direction: decise Main Axis (default is "row")
 
     ![flexbox-axis](./assets/flexbox_axis.png)
 
-  - justify-content: change Main Axis's Item-Position
-  - align-items: change Cross Axis's Item-Position
+  - justify-content: change Main Axis's Item-Positions ( flex-start, center, stretch, ... )
+
+  - align-items: change Cross Axis's Item-Positions ( flex-start, flex-end, ... )
+
+- Child Properties
+
+  ```css
+  .child:nth-child(1) {
+    align-self: center;
+    order: 1;
+  }
+  .child:nth-child(2) {
+    align-self: flex-end;
+    order: 2;
+  }
+  ```
+
+  - align-self : change Cross Axis like align-items (need to specify a height for the Parent)
+
+  - order : change the order of item (default order is "0")
+
+- Flexbox Froggy Game : https://flexboxfroggy.com/#ko
