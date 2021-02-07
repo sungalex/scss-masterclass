@@ -6,6 +6,7 @@
   /* Cross Axis */
   align-items: flex-start;
   height: 50vh;
+  flex-wrap: wrap;
 }
 
 .child {
@@ -15,14 +16,7 @@
   display: inline-block;
   color: white;
   font-size: 32px;
-}
-
-.child:nth-child(1) {
-  align-self: center;
-  order: 1;
-}
-
-.child:nth-child(2) {
-  align-self: flex-end;
-  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

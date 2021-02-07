@@ -61,4 +61,14 @@
 
   - order : change the order of item (default order is "0")
 
+- flex-wrap
+
+  - flexbox is basically trying to keep everything in one line (default is "flex-wrap: nowrap")
+
+    ```css
+    .parent {
+      flex-wrap: wrap; /* keep the item's width-size */
+    }
+    ```
+
 - Flexbox Froggy Game : https://flexboxfroggy.com/#ko
