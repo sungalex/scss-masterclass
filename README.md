@@ -9,7 +9,8 @@
 - [x] align-items
 - [x] align-self
 - [x] order
-- [ ] flex-wrap
+- [x] flex-wrap
+- [x] reverse
 - [ ] align-content
 - [ ] flex-grow
 - [ ] flex-shrink
@@ -70,5 +71,12 @@
       flex-wrap: wrap; /* keep the item's width-size */
     }
     ```
+
+- reverse : flexbox have many reverse
+
+  ```css
+  flex-derection: row-reverse; /* row, column, column-reverse, ... */
+  flex-wrap: wrap-reverse; /* default is "nowrap" */
+  ```
 
 - Flexbox Froggy Game : https://flexboxfroggy.com/#ko
