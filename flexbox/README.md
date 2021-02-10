@@ -36,7 +36,7 @@
 }
 ```
 
-![flexbox-axis](./img/flexbox_axis.png)
+![flexbox-axis](./img/flexbox-axis.png)
 
 - flex-direction: Main Axis 지정(default is "row")
 
