@@ -6,7 +6,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 
 - 참고 블로그 : [CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)
 
-- [ ] grid-template-areas
 - [ ] grid-column-start
 - [ ] grid-column-end
 - [ ] grid-row-start
@@ -33,7 +32,7 @@ Container에 "disply: grid"로 지정하면 Grid 레이아웃이 적용 됩니�
 
 ```css
 .parent {
-  display: grid;
+  display: grid; /* 그리드 컨테이너(Container)를 정의 */
   grid-template-columns: 200px 200px 200px;
   grid-template-rows: 100px 50px 300px;
   column-gap: 5px;
@@ -46,3 +45,26 @@ Container에 "disply: grid"로 지정하면 Grid 레이아웃이 적용 됩니�
 - [x] column-gap : 컬럼 사이의 간격
 - [x] row-gap : 행 사이의 간격
 - [x] gap : 컬럼과 행의 간격 (행과 컬럼의 간격이 동일)
+
+## Grid Template Areas
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: 100px repeat(2, 200px) 100px;
+  grid-template-areas:  /* header, content, nav, footer는 Area 이름 */
+    'header header header header'
+    'content content content nav'
+    'content content content nav'
+    'footer footer footer footer';
+}
+
+.header {
+  grid-area: header; /* Area 이름 지정 */
+}
+```
+
+- [x] grid-template-areas : 영역(Area) 이름을 참조해 템플릿 생성
+- [x] grid-area : grid-template-areas에서 사용할 Area의 이름을 지정
+- [x] repeat()로 반복할 컬럼이나 행의 개수와 크기를 지정할 수 있다.
