@@ -22,7 +22,8 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 
 ## CSS Grid Basic Concepts
 
-Container에 "disply: grid"로 지정하면 Grid 레이아웃이 적용 됩니다.
+"disply: grid"로 Grid Container(컨테이너)를 정의합니다.
+정의된 컨테이너의 자식 요소들은 자동으로 Grid Items(아이템)로 정의됩니다.
 
 ```css
 .grid {
@@ -34,6 +35,9 @@ Container에 "disply: grid"로 지정하면 Grid 레이아웃이 적용 됩니�
 }
 ```
 
+- [x] display
+  - grid : Block 특성의 Grid Container를 정의
+  - inline-grid : Inline 특성의 Grid Container를 정의
 - [x] grid-template-columns : 컬럼의 갯수와 너비
 - [x] grid-template-rows : 행의 갯수와 너비
 - [x] column-gap : 컬럼 사이의 간격
@@ -102,3 +106,16 @@ Container에 "disply: grid"로 지정하면 Grid 레이아웃이 적용 됩니�
 
 - [x] grid-column : grid-column-xxx의 단축 속성(열 시작/끝 위치)
 - [x] grid-row : grid-row-xxx의 단축 속성(행 시작/끝 위치)
+
+```css
+.header {
+  grid-column: 1 / -1;
+}
+
+.content {
+  grid-column: 1 / -2;
+  grid-row: 2 / 4;
+}
+```
+
+- [x] grid-column의 끝 위치를 맨 끝("-1")에서 부터 역순번으로 지정 가능
