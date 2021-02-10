@@ -1,10 +1,9 @@
 .parent {
   display: flex;
-  flex-direction: row-reverse; /* default is "row" */
+  flex-direction: row; /* default is "row" */
   /* Main Axis */
   justify-content: space-around;
   align-content: space-around;
-  flex-wrap: wrap-reverse;
   /* Cross Axis */
   align-items: flex-start;
   height: 50vh;
@@ -20,4 +19,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.child:nth-child(3) {
+  background-color: #000;
+  flex-shrink: 2; /* default is 1 */
+  flex-grow: 1; /* default is 0 */
+}
+
+.child:nth-child(4) {
+  flex-shrink: 3;
 }
