@@ -1,7 +1,9 @@
 # Grid
 
 CSS Grid(그리드)는 2차원(행과 열)의 레이아웃 시스템을 제공합니다.
+
 CSS Grid는 Container(컨테이너)와 Item(아이템)이라는 두 가지 개념으로 구분되어 있습니다.
+
 Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 배치할 수 있습니다.
 
 - 참고 블로그 : [CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)
@@ -23,6 +25,7 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 ## CSS Grid Basic Concepts
 
 "disply: grid"로 Grid Container(컨테이너)를 정의합니다.
+
 정의된 컨테이너의 자식 요소들은 자동으로 Grid Items(아이템)로 정의됩니다.
 
 ```css
@@ -64,11 +67,15 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 
 - [x] grid-template-areas : 영역(Area) 이름을 참조해 템플릿 생성
 - [x] grid-area : grid-template-areas에서 사용할 Area의 이름을 지정
-- [x] repeat()로 반복할 컬럼이나 행의 개수와 크기를 지정할 수 있다.
+- [x] repeat()로 반복할 컬럼이나 행의 개수와 크기를 지정
 
 ## Columns and Rows
 
-grid-template-areas를 사용하지 않고, grid-column-xxx, grid-row-xxx를 이용하여 아이템의 시작 위치와 끝 위치를 지정해서 템플릿을 구성할 수 있다.
+grid-template-areas를 사용하지 않고, grid-column-start/end, grid-row-start/end로 아이템의 시작 위치와 끝 위치를 지정해서 템플릿을 구성할 수 있습니다.
+
+그리드 아이템의 시작 위치와 끝 위치는 Grid의 선 번호를 지정하며, 선 번호는 맨 왼쪽 시작 위치가 1입니다.
+
+- 브라우저 개발자 도구 소스보기(검사)의 "Elements" 탭에서, HTML 소스의 Grid container 옆에 있는 <kbd>grid</kbd> 를 클릭하면 선 번호를 확인할 수 있음
 
 ```css
 .header {
@@ -87,10 +94,10 @@ grid-template-areas를 사용하지 않고, grid-column-xxx, grid-row-xxx를 이
 - [x] grid-column-end : 그리드 아이템의 열 끝 위치 지정
 - [x] grid-row-start : 그리드 아이템(Item)의 행 시작 위치 지정
 - [x] grid-row-end : 그리드 아이템의 행 끝 위치 지정
-- [x] 그리드 아이템의 시작 위치와 끝 위치는 Grid의 선 번호를 지정하며, 선 번호는 맨 왼쪽 시작 위치가 1이다.
-      브라우저 소스보기(검사) 개발자 도구의 "Elements" 탭에서, HTML 소스의 Grid container 옆에 있는 <kbd>grid</kbd> 를 클릭하면 선 번호를 확인할 수 있다.
 
-grid-column-xxx, grid-row-xxx를 단축해서 grid-column, grid-row를 지정할 수 있다. "시작 위치 / 끝 위치" 형태로 지정한다.
+grid-column-start/end, grid-row-start/end를 단축해서 grid-column, grid-row로 지정할 수 있습니다.
+
+- 속성을 "시작 위치 / 끝 위치" 형태로 지정
 
 ```css
 .header {
@@ -105,7 +112,7 @@ grid-column-xxx, grid-row-xxx를 단축해서 grid-column, grid-row를 지정할
 - [x] grid-column : grid-column-xxx의 단축 속성(열 시작/끝 위치)
 - [x] grid-row : grid-row-xxx의 단축 속성(행 시작/끝 위치)
 
-grid-column의 끝 위치를 맨 끝("-1")에서 부터 역순번으로 지정 가능하다.
+grid-column의 끝 위치를 맨 끝("-1")에서 부터 역순번으로 지정 가능합니다.
 
 ```css
 .header {
@@ -117,7 +124,9 @@ grid-column의 끝 위치를 맨 끝("-1")에서 부터 역순번으로 지정 �
 }
 ```
 
-span으로 아이템이 크기를 지정할 수 있다. 시작 위치는 앞에서 부터 차례로 채워진다. 아래에서는 "content" 아이템의 column 크기 3개 뒤에 4번째에 "nav" 아이템이 위치한다.
+span으로 아이템이 크기를 지정할 수 있습니다. span을 사용하는 경우 시작 위치는 앞에서 부터 차례로 채워집니다.
+
+- 아래의 예에서는 "content" 아이템의 column 크기 3개 뒤에 4번째 위치에 "nav" 아이템이 위치하게 됨
 
 ```css
 .header {
@@ -137,7 +146,7 @@ span으로 아이템이 크기를 지정할 수 있다. 시작 위치는 앞에�
 
 ## Line Naming
 
-"[ ]" 안에 선 번호에 대한 이름을 지정하여, 아이템의 시작과 끝 위치에 이 이름을 사용할 수 있다.
+"[ ]" 안에 선 번호에 대한 이름을 지정하여, 아이템의 시작과 끝 위치에 이 이름을 사용할 수 있습니다.
 
 ```css
 .grid {
