@@ -6,13 +6,14 @@
   align-content: space-around;
   /* Cross Axis */
   align-items: flex-start;
-  height: 50vh;
+  width: 100%;
+  height: 100vh;
 }
 
 .child {
   background: peru;
+  flex-basis: 200px;
   height: 200px;
-  width: 200px;
   display: inline-block;
   color: white;
   font-size: 32px;
@@ -21,12 +22,12 @@
   align-items: center;
 }
 
-.child:nth-child(3) {
+.child:nth-child(2) {
   background-color: #000;
   flex-shrink: 2; /* default is 1 */
   flex-grow: 1; /* default is 0 */
 }
 
-.child:nth-child(4) {
+.child:nth-child(3) {
   flex-shrink: 3;
 }

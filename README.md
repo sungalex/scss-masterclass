@@ -14,7 +14,7 @@
 - [x] align-content
 - [x] flex-grow
 - [x] flex-shrink
-- [ ] flex-basis
+- [x] flex-basis
 
 - First Rule: Flex Container Wrapper
 
@@ -68,7 +68,7 @@
   }
   ```
 
-- align-content : flex-wrap을 wrap으로 설정되어 여러 줄로 나뉘는 경우 라인 간격 설정을 지정함
+- align-content : flex-wrap을 wrap으로 설정하여 여러 줄로 나뉘는 경우, 라인 간격 설정을 지정함
 
   - 설정 방식은 justify-content와 유사함
 
@@ -113,5 +113,10 @@
   - flex-grow: 아이템 크기를 늘여서 전체 여백을 채울 때 해당 아이템이 여백을 차지하는 비율
 
     - default는 0(아이템 크기가 늘어나지 않고 아이템 사이에 공백이 생김)
+
+  - flex-basis : Main Axis의 element 처음 크기를 지정
+
+    - flex-direction이 row이면 width를 지정하는 것과 같고, flex-direction이 column이면 height를 지정하는 것과 같음
+    - element의 처음 크기를 지정하는 것이며, flex-shrink나 flex-grow에 의해 실제 크기는 변겨됨
 
 - flexbox 연습 게임 : [Flexbox Froggy Game](https://flexboxfroggy.com/#ko)
