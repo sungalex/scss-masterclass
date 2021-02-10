@@ -6,8 +6,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 
 - 참고 블로그 : [CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)
 
-- [ ] grid-column
-- [ ] grid-row
 - [ ] grid-template
 - [ ] justify-items
 - [ ] align-items
@@ -27,7 +25,7 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 Container에 "disply: grid"로 지정하면 Grid 레이아웃이 적용 됩니다.
 
 ```css
-.parent {
+.grid {
   display: grid; /* 그리드 컨테이너(Container)를 정의 */
   grid-template-columns: 200px 200px 200px;
   grid-template-rows: 100px 50px 300px;
@@ -71,13 +69,11 @@ Container에 "disply: grid"로 지정하면 Grid 레이아웃이 적용 됩니�
 
 ```css
 .header {
-  background-color: #2ecc71;
   grid-column-start: 1;
   grid-column-end: 5;
 }
 
 .content {
-  background-color: #3498db;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 2;
@@ -92,3 +88,17 @@ Container에 "disply: grid"로 지정하면 Grid 레이아웃이 적용 됩니�
 
 - 그리드 아이템의 시작 위치와 끝 위치는 Grid의 선 번호를 지정하며, 선 번호는 맨 왼쪽 시작 위치가 1이다.
   브라우저 소스보기(검사) 개발자 도구의 "Elements" 탭에서, HTML 소스의 Grid container 옆에 있는 <kbd>grid</kbd> 를 클릭하면 선 번호를 확인할 수 있다.
+
+```css
+.header {
+  grid-column: 1 / 5;
+}
+
+.content {
+  grid-column: 1 / 4;
+  grid-row: 2 / 4;
+}
+```
+
+- [x] grid-column : grid-column-xxx의 단축 속성(열 시작/끝 위치)
+- [x] grid-row : grid-row-xxx의 단축 속성(행 시작/끝 위치)
