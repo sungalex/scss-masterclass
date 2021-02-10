@@ -2,47 +2,18 @@
 
 (S)CSS Layout Masterclass: Flexbox & Grid ([nomadcoder](https://nomadcoders.co/css-layout-masterclass))
 
-## Flexbox:
+## [Flexbox](./flexbox)
 
-- [x] flex-direction
-- [x] justify-content
-- [x] align-items
-- [x] align-self
-- [x] order
-- [x] flex-wrap
-- [x] reverse
-- [x] align-content
-- [x] flex-grow
-- [x] flex-shrink
-- [x] flex-basis
+flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이아웃 메서드입니다.
+항목은 부족한 공간에 맞추기 위해 축소되거나 여분의 공간을 채우기 위해 변형됩니다.
 
-## Grid:
+컨테이너 내의 아이템 간 공간 배분과 정렬 기능을 제공하기 위한 1차원 레이아웃 모델 입니다.
+flexbox를 1차원이라 칭하는 것은, 레이아웃을 다룰 때 한 번에 하나의 차원(행이나 열)만을 다룬다는 뜻입니다.
 
-- [ ] grid-template-columns
-- [ ] grid-template-rows
-- [ ] column-gap
-- [ ] row-gap
-- [ ] gap
-- [ ] grid-template-areas
-- [ ] grid-column-start
-- [ ] grid-column-end
-- [ ] grid-row-start
-- [ ] grid-row-end
-- [ ] grid-column
-- [ ] grid-row
-- [ ] grid-template
-- [ ] justify-items
-- [ ] align-items
-- [ ] place-items
-- [ ] justify-content
-- [ ] align-content
-- [ ] place-content
-- [ ] justify-self
-- [ ] align-self
-- [ ] place-self
-- [ ] grid-auto-rows
-- [ ] grid-auto-flow
-- [ ] grid-auto-columns
+## [Grid](./grid)
+
+CSS Grid(그리드)는 2차원(행과 열)의 레이아웃 시스템을 제공합니다.
+CSS Grid는 Container(컨테이너)와 Item(아이템)이라는 두 가지 개념으로 구분되어 있습니다. Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 배치할 수 있습니다.
 
 ## Keywords & Functions:
 
