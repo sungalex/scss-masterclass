@@ -1,16 +1,10 @@
 # Flexbox
 
-- [x] flex-direction
-- [x] justify-content
-- [x] align-items
-- [x] align-self
-- [x] order
-- [x] flex-wrap
-- [x] reverse
-- [x] align-content
-- [x] flex-grow
-- [x] flex-shrink
-- [x] flex-basis
+flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이아웃 메서드입니다.
+항목은 부족한 공간에 맞추기 위해 축소되거나 여분의 공간을 채우기 위해 변형됩니다.
+
+컨테이너 내의 아이템 간 공간 배분과 정렬 기능을 제공하기 위한 1차원 레이아웃 모델 입니다.
+flexbox를 1차원이라 칭하는 것은, 레이아웃을 다룰 때 한 번에 하나의 차원(행이나 열)만을 다룬다는 뜻입니다.
 
 ## First Rule: Flex Container Wrapper
 
@@ -24,6 +18,10 @@
 - 대부분의 flex 설정은 부모 테그에 지정하고 자식 태그에 적용됨
 
 ## Main Axis and Cross Axis
+
+- [x] flex-direction : Main Axis 지정
+- [x] justify-content : Main Axis 정열 방식 지정
+- [x] align-items : Cross Axis 정열 방식 지정
 
 ```css
 .parent {
