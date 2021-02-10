@@ -57,7 +57,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
     'content content content nav'
     'footer footer footer footer';
 }
-
 .header {
   grid-area: header; /* Area 이름 지정 */
 }
@@ -76,7 +75,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
   grid-column-start: 1;
   grid-column-end: 5;
 }
-
 .content {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -97,7 +95,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 .header {
   grid-column: 1 / 5;
 }
-
 .content {
   grid-column: 1 / 4;
   grid-row: 2 / 4;
@@ -111,7 +108,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 .header {
   grid-column: 1 / -1;
 }
-
 .content {
   grid-column: 1 / -2;
   grid-row: 2 / 4;
@@ -119,3 +115,19 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 ```
 
 - [x] grid-column의 끝 위치를 맨 끝("-1")에서 부터 역순번으로 지정 가능
+
+```css
+.header {
+  grid-column: span 4;
+}
+.content {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+.nav {
+  grid-row: span 2;
+}
+.footer {
+  grid-column: span 4;
+}
+```
