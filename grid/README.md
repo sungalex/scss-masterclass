@@ -8,9 +8,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 
 - nomadcoders 강의 외에 추가로 참고한 블로그 : [CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)
 
-- [ ] justify-content
-- [ ] align-content
-- [ ] place-content
 - [ ] justify-self
 - [ ] align-self
 - [ ] place-self
@@ -205,3 +202,23 @@ grid-template-columns, grid-template-rows 대신 아이템의 Area 이름으로 
 
 - [x] justify-items : 가로 방향으로 아이템 정열 방식 지정
 - [x] align-items : 세로 방향으로 아이템 정열 방식 지정
+
+## Place Content
+
+화면에서의 그리드의 배치를 조정하고자 할 때(그리드 전체를 움직이고자 할 때) justify-content, align-content를 사용합니다.
+
+```css
+.grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  justify-content: space-around;
+  align-content: flex-start;
+}
+```
+
+- [x] justify-content : 그리드 콘텐츠를 수평(행 축) 정렬
+- [x] align-content : 그리드 콘텐츠(Grid Contents)를 수직(열 축) 정렬
+- [x] place-content : justify-content, align-content을 각각 사용하는 대신 정열 방식을 한번에 지정
+  - 예) `place-content: flex-start space-around;` (수직 정열 방식, 수평 정열 방식 순으로 지정)

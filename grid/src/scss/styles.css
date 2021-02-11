@@ -1,11 +1,12 @@
 .grid {
   display: grid;
-  height: 50vh;
+  background-color: gray;
+  color: white;
+  height: 100vh;
   gap: 5px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  justify-items: end;
-  align-items: streth;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  place-content: flex-start space-around; /* 수직정열 수평정열 */
 }
 
 .header {
