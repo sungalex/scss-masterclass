@@ -6,7 +6,7 @@ CSS Grid는 Container(컨테이너)와 Item(아이템)이라는 두 가지 개�
 
 Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 배치할 수 있습니다.
 
-- 참고 블로그 : [CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)
+- nomadcoders 강의 외에 추가로 참고한 블로그 : [CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)
 
 - [ ] grid-template
 - [ ] justify-items
@@ -157,3 +157,39 @@ span으로 아이템이 크기를 지정할 수 있습니다. span을 사용하�
   grid-column: line1 / line5;
 }
 ```
+
+## Grid Template
+
+"fr"(fraction) 측정단위는 기본적으로 사용 가능한 많은 공간을 차지합니다.
+
+fr의 크기는 navigator가 아닌 grid container 크기를 기준으로 계산합니다. 화면의 크기가 변하면 자동으로 화면의 크기에 맞춰 fr의 크기가 변합니다.
+
+grid는 높이가 없기 때문에 row에 fr을 사용하려면 height를 지정해줘야 합니다.
+
+```css
+.grid {
+  display: grid;
+  height: 50vh; /* 화면 높이의 1/2 크기 */
+  grid-template-columns: repeat(4, 1fr); /* 동일한 크기의 4개 아이템 */
+  grid-template-rows: 1fr repeat(2, 2fr) 1fr;
+}
+```
+
+grid-template-columns, grid-template-rows 대신 아이템의 Area 이름으로 grid-template에 템플릿을 설정할 수 있습니다.
+
+```css
+.grid {
+  display: grid;
+  height: 50vh;
+  grid-template:
+    'header header' 1fr
+    'content nav' 2fr
+    'footer footer' 1fr / 3fr 1fr;
+}
+.header {
+  grid-area: header;
+}
+```
+
+- [x] grid-template : "`'area-name' 높이 / 넓이`" 형태로 지정
+  - 넓이는 마지막 행에만 지정함
