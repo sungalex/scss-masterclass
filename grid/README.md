@@ -8,10 +8,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 
 - nomadcoders 강의 외에 추가로 참고한 블로그 : [CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)
 
-- [ ] grid-template
-- [ ] justify-items
-- [ ] align-items
-- [ ] place-items
 - [ ] justify-content
 - [ ] align-content
 - [ ] place-content
@@ -193,3 +189,19 @@ grid-template-columns, grid-template-rows 대신 아이템의 Area 이름으로 
 
 - [x] grid-template : "`'area-name' 높이 / 넓이`" 형태로 지정
   - 넓이는 마지막 행에만 지정함
+
+## Place Items
+
+```css
+.grid {
+  display: grid;
+  height: 50vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: end;
+  align-items: streth;
+}
+```
+
+- [x] justify-items : 가로 방향으로 아이템 정열 방식 지정
+- [x] align-items : 세로 방향으로 아이템 정열 방식 지정
