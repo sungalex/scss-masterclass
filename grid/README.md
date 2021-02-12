@@ -243,7 +243,7 @@ grid-auto-rows, grid-auto-columns으로 행이나 열에 자동으로 추가되�
 .grid {
   display: grid;
   color: white;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: 100px;
   grid-template-rows: repeat(4, 100px);
   grid-auto-flow: column;
   grid-auto-columns: 100px;
