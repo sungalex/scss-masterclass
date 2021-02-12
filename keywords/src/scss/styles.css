@@ -1,27 +1,21 @@
 .grid {
   display: grid;
   color: white;
-  height: 100vh;
-  gap: 5px;
-  grid-template-columns: repeat(5, minmax(100px, 1fr));
-  grid-template-rows: repeat(4, 100px);
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
 }
 
-.item {
-  background-color: #2f86f7;
-}
-
-/*
-.header {
+.item:nth-child(odd) {
   background-color: #2ecc71;
 }
-.content {
+.item:nth-child(even) {
   background-color: #3498db;
 }
-.nav {
-  background-color: #8e44ad;
+
+.grid:first-child {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
-.footer {
-  background-color: #f39c12;
+
+.grid:last-child {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
-*/

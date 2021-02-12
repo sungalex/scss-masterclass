@@ -1,7 +1,5 @@
 # Keywords & Functions
 
-- [ ] auto-fit
-- [ ] auto-fill
 - [ ] min-content
 - [ ] max-content
 
@@ -39,6 +37,32 @@ grid-template-rows, grid-template-columns, grid-auto-rows 그리고 grid-auto-co
 ```css
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  grid-template-columns: repeat(5, minmax(auto, 1fr));
+}
+```
+
+## auto-fill & auto-fit
+
+행/열(Track)의 개수를 그리드 컨테이너(Container) 및 행/열 크기에 맞게 자동으로(암시적) 조정합니다.
+repeat() 함수와 같이 사용하며, 행/열과 아이템(Item) 개수가 명확할 필요가 없거나 명확하지 않은 경우 유용합니다.(반응형 그리드 디자인을 할 수 있습니다.)
+
+컨테이너의 크기가 아이템들을 수용하기 충분하지 않을 경우 아이템을 자동으로 줄 바꿈 처리하며, 그에 맞게 암시적 행/열도 자동으로 수정합니다.
+
+auto-fill과 auto-fit의 차이점은 그리드 컨테이너가 하나의 행/열(Track)에 모든 아이템을 수용하고 남는 공간이 있을 때 발생합니다.
+auto-fill은 남는 공간(빈 트랙)을 그대로 유지하여 가상의 그리드 셀로 Grid 영역을 채웁니다.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+```
+
+auto-fit은 Item의 크기를 늘여서 남는 공간을 없앱니다.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 ```
