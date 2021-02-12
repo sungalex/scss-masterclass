@@ -4,18 +4,20 @@
 
 "fr" 단위는 기본적으로 사용 가능한 많은 공간을 차지합니다.
 
-fr의 크기는 navigator가 아닌 grid container 크기를 기준으로 계산합니다. 화면의 크기가 변하면 자동으로 화면의 크기에 맞춰 fr의 크기가 변합니다.
-
-grid는 높이가 없기 때문에 row에 fr을 사용하려면 height를 지정해줘야 합니다.
+fr 단위들은 사용가능한 공간을 하나로 공유하여 할당합니다. 예시로, 두개의 element들을 1fr과 3fr로 설정시, 공간이 4개의 동일한 크기로 공유됩니다. 첫번째 element는 사용가능한 공간의 1/4 크기로 그리고 두번째 element는 3/4 크기를 차지합니다.
 
 ```css
 .grid {
   display: grid;
   height: 50vh; /* 화면 높이의 1/2 크기 */
-  grid-template-columns: repeat(4, 1fr); /* 동일한 크기의 4개 아이템 */
+  grid-template-columns: 1fr 3fr; /* 4개의 동일한 크기 중 1/4 크기, 3/4 크기 */
   grid-template-rows: 1fr repeat(2, 2fr) 1fr;
 }
 ```
+
+- fr의 크기는 navigator가 아닌 grid container 크기를 기준으로 계산합니다. 화면의 크기가 변하면 자동으로 화면의 크기에 맞춰 fr의 크기가 변합니다.
+
+- grid는 높이가 없기 때문에 row에 fr을 사용하려면 height를 지정해줘야 합니다.
 
 ## repeat()
 
