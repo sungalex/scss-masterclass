@@ -272,3 +272,7 @@ grid-auto-rows, grid-auto-columns으로 행이나 열에 자동으로 추가되�
 - [x] grid-auto-flow : 추가 Elements의 자동 배치 방향을 정의
 - [x] grid-auto-rows : 암시적인 행(Track)의 크기를 정의
 - [x] grid-auto-columns : 암시적인 열(Track)의 크기를 정의
+
+## Grid 연습 게임
+
+- [Grid Garden Game](http://cssgridgarden.com/)
