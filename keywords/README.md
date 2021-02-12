@@ -1,11 +1,8 @@
 # Keywords & Functions
 
-- [ ] min-content
-- [ ] max-content
-
 ## fr (Fraction)
 
-"fr" 측정단위는 기본적으로 사용 가능한 많은 공간을 차지합니다.
+"fr" 단위는 기본적으로 사용 가능한 많은 공간을 차지합니다.
 
 fr의 크기는 navigator가 아닌 grid container 크기를 기준으로 계산합니다. 화면의 크기가 변하면 자동으로 화면의 크기에 맞춰 fr의 크기가 변합니다.
 
@@ -44,6 +41,7 @@ grid-template-rows, grid-template-columns, grid-auto-rows 그리고 grid-auto-co
 ## auto-fill & auto-fit
 
 행/열(Track)의 개수를 그리드 컨테이너(Container) 및 행/열 크기에 맞게 자동으로(암시적) 조정합니다.
+
 repeat() 함수와 같이 사용하며, 행/열과 아이템(Item) 개수가 명확할 필요가 없거나 명확하지 않은 경우 유용합니다.(반응형 그리드 디자인을 할 수 있습니다.)
 
 컨테이너의 크기가 아이템들을 수용하기 충분하지 않을 경우 아이템을 자동으로 줄 바꿈 처리하며, 그에 맞게 암시적 행/열도 자동으로 수정합니다.
@@ -64,5 +62,21 @@ auto-fit은 Item의 크기를 늘여서 남는 공간을 없앱니다.
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+```
+
+## min-content & max-content
+
+min-content는 그리드 아이템이 포함하는 내용(Contents)의 최소 크기를 의미합니다.
+max-content는 그리드 아이템이 포함하는 내용(Contents)의 최대 크기를 의미합니다.
+
+- 한글을 사용하는 경우 `word-break: keep-all;`를 설정하면 정상적으로 동작합니다.
+
+그리드 함수들과 같이 더 유용하게 활용할 수 있습니다.
+다음 예제는 총 4컬럼 그리드를 생성하며 각 열(Track)은 최대 1fr 크기를 가지지만, max-content를 통해 포함된 그리드 아이템의 내용보다 작아질 수 없습니다.
+
+```css
+.grid {
+  grid-template-columns: repeat(4, minmax(max-content, 1fr));
 }
 ```
