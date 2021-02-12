@@ -17,3 +17,18 @@
 .item:nth-child(even) {
   background-color: #3498db;
 }
+
+/*
+.header {
+  background-color: #2ecc71;
+}
+.content {
+  background-color: #3498db;
+}
+.nav {
+  background-color: #8e44ad;
+}
+.footer {
+  background-color: #f39c12;
+}
+*/
