@@ -15,15 +15,7 @@ flexbox를 1차원이라 칭하는 것은, 레이아웃을 다룰 때 한 번에
 CSS Grid(그리드)는 2차원(행과 열)의 레이아웃 시스템을 제공합니다.
 CSS Grid는 Container(컨테이너)와 Item(아이템)이라는 두 가지 개념으로 구분되어 있습니다. Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 배치할 수 있습니다.
 
-## Keywords & Functions:
-
-- [ ] repeat
-- [ ] fr
-- [ ] minmax
-- [ ] auto-fit
-- [ ] auto-fill
-- [ ] min-content
-- [ ] max-content
+## [Keywords & Functions](./keywords)
 
 ## SCSS:
 
