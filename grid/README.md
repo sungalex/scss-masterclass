@@ -8,13 +8,6 @@ Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 �
 
 - nomadcoders 강의 외에 추가로 참고한 블로그 : [CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)
 
-- [ ] justify-self
-- [ ] align-self
-- [ ] place-self
-- [ ] grid-auto-rows
-- [ ] grid-auto-flow
-- [ ] grid-auto-columns
-
 ## CSS Grid Basic Concepts
 
 "disply: grid"로 Grid Container(컨테이너)를 정의합니다.
@@ -219,6 +212,44 @@ grid-template-columns, grid-template-rows 대신 아이템의 Area 이름으로 
 ```
 
 - [x] justify-content : 그리드 콘텐츠를 수평(행 축) 정렬
-- [x] align-content : 그리드 콘텐츠(Grid Contents)를 수직(열 축) 정렬
+- [x] align-content : 그리드 콘텐츠를 수직(열 축) 정렬
 - [x] place-content : justify-content, align-content을 각각 사용하는 대신 정열 방식을 한번에 지정
   - 예) `place-content: flex-start space-around;` (수직 정열 방식, 수평 정열 방식 순으로 지정)
+
+## Single Gird Item Properties
+
+단일 그리드 아이템을 수평, 수직 축으로 정렬하고자 할 때는 아이템 태그에 justify-self, align-self를 사용합니다.
+
+```css
+.header {
+  justify-self: end;
+  align-self: center;
+}
+```
+
+- [x] justify-self : 하나의 그리드 아이템을 수평(행 축) 정렬
+- [x] align-self : 하나의 그리드 아이템을 수직(열 축) 정렬
+- [x] place-self : align-self와 justify-self의 단축 속성
+
+## Auto Columns and Rows
+
+지정한 아이템 수 보다 더 많은 Elements가 있는 경우, 행 축 방향으로 나머지 아이템들을 자동으로 표시 해줍니다.
+
+Elements를 추가로 표시하는 방향을 grid-auto-flow로 설정할 수 있습니다. Default는 "row" 방향 입니다.
+
+grid-auto-rows, grid-auto-columns으로 행이나 열에 자동으로 추가되는 아이템들의 암시적인 크기를 설정할 수 있습니다.
+
+```css
+.grid {
+  display: grid;
+  color: white;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+}
+```
+
+- [x] grid-auto-flow : 추가 Elements의 자동 배치 방향을 정의
+- [x] grid-auto-rows : 암시적인 행(Track)의 크기를 정의
+- [x] grid-auto-columns : 암시적인 열(Track)의 크기를 정의
