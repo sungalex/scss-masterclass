@@ -2,6 +2,8 @@
 
 CSS Grid(그리드)는 2차원(행과 열)의 레이아웃 시스템을 제공합니다.
 
+![Gird](./img/grid.jpg)
+
 CSS Grid는 Container(컨테이너)와 Item(아이템)이라는 두 가지 개념으로 구분되어 있습니다.
 
 Container는 Items를 감싸는 부모 요소이며, 그 안에서 각 Item을 배치할 수 있습니다.
