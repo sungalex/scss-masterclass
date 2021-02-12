@@ -1,0 +1,27 @@
+.grid {
+  display: grid;
+  color: white;
+  height: 100vh;
+  gap: 5px;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  grid-template-rows: repeat(4, 100px);
+}
+
+.item {
+  background-color: #2f86f7;
+}
+
+/*
+.header {
+  background-color: #2ecc71;
+}
+.content {
+  background-color: #3498db;
+}
+.nav {
+  background-color: #8e44ad;
+}
+.footer {
+  background-color: #f39c12;
+}
+*/
