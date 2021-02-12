@@ -17,6 +17,8 @@ CSS Grid는 Container(컨테이너)와 Item(아이템)이라는 두 가지 개�
 
 ## [Keywords & Functions](./keywords)
 
+"fr" 측정 단위, repeat, minmax, auto-fit, auto-fill, min-content, max-content에 대해 알아봅니다.
+
 ## SCSS:
 
 - [ ] Variables
