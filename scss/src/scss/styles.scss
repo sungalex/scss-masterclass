@@ -1,5 +1,19 @@
 @import '_variables';
 
 body {
-  background-color: $bg;
+  h2 {
+    color: $red;
+  }
+  .box {
+    &:hover {
+      background-color: gray;
+    }
+    h2 {
+      color: blue;
+      font-size: $title;
+    }
+  }
+  button {
+    color: $red;
+  }
 }

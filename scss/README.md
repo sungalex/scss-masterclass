@@ -1,7 +1,5 @@
 # SCSS
 
-- [ ] Variables
-- [ ] Nesting
 - [ ] Mixins
 - [ ] Extend
 - [ ] Responsive Mixins
@@ -39,5 +37,47 @@ $bg: #e1463a; /* red */
 
 body {
   background-color: $bg;
+}
+```
+
+## Nesting
+
+상위 선택자의 반복을 피하고 좀 더 편리하게 복잡한 구조를 작성할 수 있습니다.
+
+- SCSS 코드
+
+```scss
+body {
+  h2 {
+    color: $red;
+  }
+  .box {
+    &:hover {
+      background-color: gray;
+    }
+    h2 {
+      color: blue;
+      font-size: $title;
+    }
+  }
+  button {
+    color: $red;
+  }
+}
+```
+
+- Compile to CSS
+
+```css
+body button,
+body h2 {
+  color: #e1463a;
+}
+body .box:hover {
+  background-color: gray;
+}
+body .box h2 {
+  color: #00f;
+  font-size: 32px;
 }
 ```
