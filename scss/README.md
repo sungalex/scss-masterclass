@@ -28,7 +28,7 @@ SCSS 파일명이 "\_"(언더스코어)로 시작하면 이 파일은 다른 SCS
 
 ```scss
 /* _variables.scss */
-$bg: #e1463a; /* red */
+$red: #e1463a;
 ```
 
 ```scss
@@ -36,7 +36,7 @@ $bg: #e1463a; /* red */
 @import '_variables';
 
 body {
-  background-color: $bg;
+  background-color: $red;
 }
 ```
 
