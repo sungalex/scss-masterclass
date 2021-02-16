@@ -43,6 +43,7 @@ body {
 ## Nesting
 
 상위 선택자의 반복을 피하고 좀 더 편리하게 복잡한 구조를 작성할 수 있습니다.
+중첩 안에서 `&` 키워드는 상위(부모) 선택자를 참조하여 치환합니다.
 
 - SCSS 코드
 
@@ -79,5 +80,41 @@ body .box:hover {
 body .box h2 {
   color: #00f;
   font-size: 32px;
+}
+```
+
+## Mixins
+
+스타일 시트 전체에서 재사용 할 CSS 선언 그룹을 정의하는 기능입니다.
+약간의 Mixin(믹스인)으로 다양한 스타일을 만들어낼 수 있습니다.
+
+우선, Mixin은 두 가지만 기억하면 됩니다. 선언하기(@mixin)와 포함하기(@include) 입니다.
+
+`@mixin` 지시어를 이용하여 스타일을 정의합니다. Mixin은 선택자를 포함 가능하고 상위(부모) 요소 참조(& 같은)도 할 수 있습니다.
+
+선언된 Mixin을 사용(포함)하기 위해서는 @include를 사용합니다.
+
+```scss
+/* _mixins.scss */
+@mixin link($color) {
+  text-decoration: none;
+  display: block;
+  color: $color;
+}
+```
+
+```scss
+@import '_variables';
+@import '_mixins';
+
+a {
+  margin-bottom: 10px;
+  &:nth-child(odd) {
+    @include link(blue);
+  }
+
+  &:nth-child(even) {
+    @include link(red);
+  }
 }
 ```
