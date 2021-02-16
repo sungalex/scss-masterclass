@@ -125,7 +125,7 @@ a {
 
 재사용할 속성 그룹명 앞에 `%`를 붙여서 선언하고, 재사용할 때는 `@extend`를 사용 합니다.
 
-Button과 Link에 동일한 속서을 적용하고 싶다면, 아래와 같이 사용할 수 있습니다.
+Button과 Link에 동일한 속성을 적용하고 싶다면, 아래와 같이 사용할 수 있습니다.
 
 ```scss
 /* _buttons.scss */
@@ -151,5 +151,60 @@ a {
 button {
   @extend %button;
   border: none;
+}
+```
+
+## 미디어 쿼리 Mixins
+
+SCSS에서 미디어 쿼리를 쉽게 사용할 수 있도록 지원하는 다양한 Mixin 라이브러리가 있습니다.
+구글 검색에서 `awesome scss mixin`과 같이 검색하면 많을 정보를 찾을 수 있습니다.
+
+- 참고 : [Awesome SCSS](https://github.com/colourgarden/awesome-scss)
+
+- 미디어 쿼리 Mixin 예
+
+```scss
+/* _mixins.scss */
+$minIphone: 320px;
+$maxIphone: 768px;
+$minTablet: 768px;
+$maxTablet: 1024px;
+
+@mixin responsive($device) {
+  @if $device == 'iphone' {
+    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) {
+      @content;
+    }
+  } @else if $device == 'tablet' {
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+      @content;
+    }
+  } @else if $device == 'iphone-l' {
+    @media screen and (max-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $device == 'ipad-l' {
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
+      @content;
+    }
+  }
+}
+```
+
+```scss
+/* styles.scss */
+@import '_mixins';
+
+h1 {
+  color: red;
+  @include responsive('iphone') {
+    color: yellow;
+  }
+  @include responsive('iphone-l') {
+    color: blue;
+  }
+  @include responsive('tablet') {
+    color: green;
+  }
 }
 ```
