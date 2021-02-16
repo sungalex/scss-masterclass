@@ -157,7 +157,7 @@ button {
 ## 미디어 쿼리 Mixins
 
 SCSS에서 미디어 쿼리를 쉽게 사용할 수 있도록 지원하는 다양한 Mixin 라이브러리가 있습니다.
-구글 검색에서 `awesome scss mixin`과 같이 검색하면 많을 정보를 찾을 수 있습니다.
+구글 검색에서 `awesome scss mixin` 처럼 검색하면 많은 정보를 찾을 수 있습니다.
 
 - 참고 : [Awesome SCSS](https://github.com/colourgarden/awesome-scss)
 
