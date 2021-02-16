@@ -1,8 +1,6 @@
 # SCSS
 
-- [ ] Mixins
-- [ ] Extend
-- [ ] Responsive Mixins
+- [[nomadcoders 강의](https://nomadcoders.co/css-layout-masterclass) 외에 추가로 참고한 블로그] : [Sass(SCSS) 완전 정복](https://heropy.blog/2018/01/31/sass/)
 
 ## SCSS Set up
 
@@ -87,12 +85,13 @@ body .box h2 {
 
 스타일 시트 전체에서 재사용 할 CSS 선언 그룹을 정의하는 기능입니다.
 약간의 Mixin(믹스인)으로 다양한 스타일을 만들어낼 수 있습니다.
+상황에 따라 코드를 다르게 사용하고 싶을 때 사용할 수 있습니다.
 
 우선, Mixin은 두 가지만 기억하면 됩니다. 선언하기(@mixin)와 포함하기(@include) 입니다.
 
 `@mixin` 지시어를 이용하여 스타일을 정의합니다. Mixin은 선택자를 포함 가능하고 상위(부모) 요소 참조(& 같은)도 할 수 있습니다.
 
-선언된 Mixin을 사용(포함)하기 위해서는 @include를 사용합니다.
+선언된 Mixin을 사용(포함)하기 위해서는 `@include`를 사용합니다.
 
 ```scss
 /* _mixins.scss */
@@ -116,5 +115,41 @@ a {
   &:nth-child(even) {
     @include link(red);
   }
+}
+```
+
+## Extends
+
+특정 선택자가 다른 선택자의 모든 스타일을 가져야하는 경우가 종종 있습니다. 이럴 경우 선택자의 확장 기능을 사용할 수 있습니다.
+같은 코드를 반복하고 싶지 않을 때 코드 재사용을 위해 사용합니다.
+
+재사용할 속성 그룹명 앞에 `%`를 붙여서 선언하고, 재사용할 때는 `@extend`를 사용 합니다.
+
+Button과 Link에 동일한 속서을 적용하고 싶다면, 아래와 같이 사용할 수 있습니다.
+
+```scss
+/* _buttons.scss */
+%button {
+  font-family: inherit;
+  border-radius: 7px;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background-color: peru;
+  color: white;
+  font-weight: 500;
+}
+```
+
+```scss
+/* styles.scss */
+@import '_buttons';
+a {
+  @extend %button;
+  text-decoration: none;
+}
+button {
+  @extend %button;
+  border: none;
 }
 ```
