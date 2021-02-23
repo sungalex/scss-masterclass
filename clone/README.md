@@ -16,4 +16,4 @@
 
 ## SCSS Set up
 
-[SCSS Set up](../scss/README.md) 문서를 참고하여, gulp로 SCSS의 변경사항을 CSS로 자동 컴파일 하도록 설정 합니다.
+[SCSS Set up](../scss/README.md#scss-set-up) 문서를 참고하여, gulp로 SCSS의 변경사항을 CSS로 자동 컴파일 하도록 설정 합니다.
