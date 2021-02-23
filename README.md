@@ -30,16 +30,16 @@ SCSS는 CSS 확장 기능을 제공하는 CSS 전처리기 입니다. 보통 CSS
 CSS가 동작하기 전에 사용하는 기능으로,
 웹에서는 분명 CSS가 동작하지만 우리는 CSS의 불편함을 이런 확장 기능으로 상쇄할 수 있습니다.
 
-## To Clone:
+## [To Clone](./clone):
 
-- [https://besthorrorscenes.com](https://besthorrorscenes.com) : [Clone 소스보기](./clone/besthorrorscenes)
-- [https://paint-box.com](https://paint-box.com) : [Clone 소스보기](./clone/paint-box)
-- [http://10x19.co](http://10x19.co) : [Clone 소스보기](./clone/10x19)
-- [http://www.z-o-o.fr](http://www.z-o-o.fr) : [Clone 소스보기](./clone/z-o-o)
-- [https://schwartzmedia.com.au](https://schwartzmedia.com.au) : [Clone 소스보기](./clone/schwartzmedia)
-- [https://tolv.dk](https://tolv.dk) : [Clone 소스보기](./clone/tolv)
-- [https://rodicdavidson.co.uk](https://rodicdavidson.co.uk) : [Clone 소스보기](./clone/rodicdavidson)
-- [https://beige.de](https://beige.de) : [Clone 소스보기](./clone/beige)
-- [http://donicaida.com](http://donicaida.com) : [Clone 소스보기](./clone/donicaida)
-- [https://canalstreet.market](https://canalstreet.market) : [Clone 소스보기](./clone/canalstreet)
-- [https://wonhundred.com](https://wonhundred.com) : [Clone 소스보기](./clone/wonhundred)
+- [https://besthorrorscenes.com](https://besthorrorscenes.com)
+- [https://paint-box.com](https://paint-box.com)
+- [http://10x19.co](http://10x19.co)
+- [http://www.z-o-o.fr](http://www.z-o-o.fr)
+- [https://schwartzmedia.com.au](https://schwartzmedia.com.au)
+- [https://tolv.dk](https://tolv.dk)
+- [https://rodicdavidson.co.uk](https://rodicdavidson.co.uk)
+- [https://beige.de](https://beige.de)
+- [http://donicaida.com](http://donicaida.com)
+- [https://canalstreet.market](https://canalstreet.market)
+- [https://wonhundred.com](https://wonhundred.com)
