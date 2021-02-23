@@ -7,7 +7,7 @@
 SCSS를 컴파일(CSS로 변환) 하는 다양한 방법이 있지만, 여기서는 gulp를 이용 합니다. Gulp는 node.js 패키지 입니다.
 
 nomadcoders(https://github.com/nomadcoders/scss-masterclass) 에서 모든 파일을 다운로드 합니다.
-`.babelrc`, `gulpfile.babel.js`, `package.json` 파일만 다운로드 해도 됩니다.
+`.babelrc`, `gulpfile.babel.js`, `package.json` 파일만 다운로드 해도 됩니다. (또는 [sungalex/scss-masterclass](https://github.com/sungalex/scss-masterclass/tree/master/scss) 에서 다운로드 합니다.)
 
 콘솔에서 `npm install` 또는 `yarn` 명령을 실행하여 필요한 패키지를 자동 설치 합니다.
 
