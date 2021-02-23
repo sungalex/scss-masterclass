@@ -17,16 +17,16 @@ CSS Grid는 Container(컨테이너)와 Item(아이템)이라는 두 가지 개�
 
 ## [Keywords & Functions](./keywords)
 
-"fr" 측정 단위, repeat, minmax, auto-fit, auto-fill, min-content, max-content에 대해 알아봅니다.
+"fr" 단위, repeat, minmax, auto-fit, auto-fill, min-content, max-content에 대해 알아봅니다.
 
 ## [SCSS](./scss)
 
 CSS는 상대적으로 배우기 쉽고 재미있습니다. 하지만 작업이 고도화될수록 불편함도 같이 커집니다.
 
 불필요한 선택자(Selector)의 과용과 연산 기능의 한계, 구문(Statement)의 부재 등 프로젝트의 규모가 커질수록 아쉬움도 같이 커집니다.
-하지만 웹에서는 표준 CSS만 동작할 수 있기 때문에 다른 선택권이 없습니다.
+하지만 웹에서는 표준 CSS만 동작합니다.
 
-SCSS는 CSS 전(예비)처리기 입니다. 보통 CSS Preprocessor 라고 부릅니다.
+SCSS는 CSS 확장 기능을 제공하는 CSS 전처리기 입니다. 보통 CSS Preprocessor 라고 부릅니다.
 CSS가 동작하기 전에 사용하는 기능으로,
 웹에서는 분명 CSS가 동작하지만 우리는 CSS의 불편함을 이런 확장 기능으로 상쇄할 수 있습니다.
 
