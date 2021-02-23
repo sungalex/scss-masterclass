@@ -1,8 +1,8 @@
-# Clone
+# SCSS Clone
 
 ## Clone Site
 
-- [ ] [https://besthorrorscenes.com](https://besthorrorscenes.com) : [Clone 소스보기](./clone/besthorrorscenes)
+- [ ] [https://besthorrorscenes.com](https://besthorrorscenes.com) : [Clone 소스보기](./besthorrorscenes)
 - [ ] [https://paint-box.com](https://paint-box.com) : [Clone 소스보기](./paint-box)
 - [ ] [http://10x19.co](http://10x19.co) : [Clone 소스보기](./10x19)
 - [ ] [http://www.z-o-o.fr](http://www.z-o-o.fr) : [Clone 소스보기](./z-o-o)
